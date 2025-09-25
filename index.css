@@ -12,7 +12,7 @@
   white-space: nowrap;
   border-right: 3px solid #ff66b2; /* cursor efecto máquina */
   width: 0;
-  animation: escribir 4s steps(30, end) forwards,
+  animation: escribir 4s steps(30, end) infinite alternate,  /* 🔹 Se repite en bucle */
              parpadeo 0.7s step-end infinite alternate;
 }
 
@@ -179,3 +179,4 @@ button:hover {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
