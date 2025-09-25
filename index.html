@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Cumpleaños Karen 🎉</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Pantalla Inicial -->
+  <div id="intro" class="screen active">
+    <div class="intro-content">
+      <h2>¡Toca el botón para comenzar!</h2>
+      <button id="startBtn">Haz clic aquí 💖</button>
+    </div>
+  </div>
+
+  <!-- Animación corazón + rosas -->
+  <div id="hearts" class="screen hidden">
+    <div class="heart-animation">
+      <h1>❤️🌹 Te amo mucho, Karencita de mi vida,<br>pequeña capybara 🌹❤️</h1>
+      <button id="continueBtn">Continuar ➡️</button>
+    </div>
+  </div>
+ 
+
+  <!-- Pantalla Principal -->
+  <div id="main" class="screen hidden">
+     <!-- fondo de rosas -->
+<div id="heart-container"></div>
+    <header>
+      <h1 id="tituloPrincipal">Feliz Cumpleaños !! 🎂</h1>
+    </header>
+    
+    
+    
+    <!-- Dedicatoria -->
+    <section class="dedicatoria">
+              
+
+      <p>
+        Mi amada y odiada Karen Rosario Vilcapoma Huamán, cada día contigo es un regalo.  
+        Hoy celebro tu vida, tu sonrisa, tus caricias, tus enojos, tus tonterias y todo lo hermoso que eres.  
+        Gracias por ser mi luz y por hacerme tan feliz.  
+        💕 ¡Feliz cumpleaños, mi negrita hermosa! 💕
+      </p>
+    </section>
+
+    <!-- Música -->
+    <section class="music">
+      <h3>Una bonita canción que te dedico 😉🎶</h3>
+      <h4>⬇️⬇️⬇️ </h4>
+      <audio id="musicaFondo" loop>
+        <source src="Resources/music.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+      </audio>
+    </section>
+  </div>
+<!-- Carrusel de fotos -->
+    <section class="carrusel">
+        
+      <div class="slides fade">
+        <img src="Resources/iamgen1.jpeg" alt="Karen 1">
+      </div>
+      <div class="slides fade">
+        <img src="Resources/imagen2.jpeg" alt="Karen 2">
+      </div>
+      <div class="slides fade">
+        <img src="Resources/imagen3.jpeg" alt="Karen 3">
+      </div>
+      <div class="slides fade">
+        <img src="Resources/imagen4.jpeg" alt="Karen 4">
+      </div>
+      <div class="slides fade">
+        <img src="Resources/imagen5.jpeg" alt="Karen 5">
+      </div>
+      
+      </div>
+      <div class="slides fade">
+        <img src="Resources/imagen7.jpeg" alt="Karen 6">
+      </div>
+      <div class="slides fade">
+        <img src="Resources/imagen8.jpeg" alt="Karen 6">
+      </div>
+    </section>
+
+  <script src="index.js"></script>
+</body>
+</html>

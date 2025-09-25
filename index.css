@@ -1,0 +1,181 @@
+/* Estilos generales */
+#tituloPrincipal {
+  display: inline-block;   /* Para que la animación de escribir respete el ancho del texto */
+  font-size: 4.5rem;       /* Más grande */
+  font-weight: bold;
+  color: #ff66b2;
+  text-align: center;
+  margin-top: 0px;       /* Más separado del borde superior */
+  margin-bottom: 30px;     /* Más separado del carrusel */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #ff66b2; /* cursor efecto máquina */
+  width: 0;
+  animation: escribir 4s steps(30, end) forwards,
+             parpadeo 0.7s step-end infinite alternate;
+}
+
+
+@keyframes escribir {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes parpadeo {
+  50% { border-color: transparent; }
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #1a001f;
+  color: #fff;
+  text-align: center;
+}
+
+/* Pantallas */
+.screen {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.screen.active {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  background: #ff4d79;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #ff6699;
+}
+
+/* Animación corazón */
+.heart-animation h1 {
+  font-size: 28px;
+  color: #ff99cc;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Carrusel */
+.carousel {
+  position: relative;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.slides {
+  display: none;
+}
+
+.slides img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
+
+.fade {
+  animation: fadeEffect 2s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+/* Dedicatoria */
+.dedicatoria {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffb6c1;
+}
+
+/* Música */
+.music {
+  margin-top: 20px;
+}
+
+.carrusel {
+  margin-top: 20px;        /* espacio entre título y carrusel */
+  padding: 15px;           /* espacio interno entre marco e imágenes */
+  border: 5px solid #6e0c3d; /* marco rosado romántico */
+  border-radius: 20px;     /* bordes redondeados */
+  background-color: rgba(255, 255, 255, 0.1); /* opcional, efecto suave */
+  box-shadow: 0 0 20px rgba(255, 102, 178, 0.5); /* brillo rosado */
+  max-width: 90%;          /* para que no ocupe toda la pantalla */
+  margin-left: auto;
+  margin-right: auto;      /* centrado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* espacio entre imágenes */
+}
+
+/* Fondo de corazones */
+#heart-container {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* atrás del contenido */
+  pointer-events: none; /* deja pasar clics al botón y texto */
+}
+
+.heart {
+  position: absolute;
+  bottom: -50px;
+  color: #ff66b2;
+  font-size: 20px;
+  opacity: 0.8;
+  animation: floatUp 6s linear forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+#main {
+  background: linear-gradient(-45deg, #1a001f, #4b0037, #000000, #801818);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
